@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+		<title>Search Engine in PHP</title> 
+		
+<style type="text/css">
+	
+	body {
+	background:#6495ED;
+	
+	
+	}
+	
+	form {
+	margin:10% 25%;
+	
+	}
+	form input[type='text']{
+	
+	padding:10px;
+	
+	}
+	
+	form #submit
+	{
+		margin:20px 35%;
+		padding:10px;
+	
+	}
+	
+
+	
+</style>
+	</head> 
+	
+	
+<body> 
+	<form action="result.php" method="get"> 
+		
+		<img src="images/logo.png" />
+		<input type="text" name="user_query" size="80" placeholder="write something to srarch" required  data-text=""/ > 
+		<input type="submit" name="search" value="Search Now" id="submit">
+		
+	
+	</form>
+
+
+<script src='jquery-3.3.1.min.js'></script>
+<script>
+  //no placeholder when you focus in text box
+		  $('[placeholder]').focus(function(){
+			  
+			  $(this).attr('data-text',$(this).attr('placeholder'));
+			  $(this).attr('placeholder','');
+			  
+		  }).blur(function(){
+			  
+			  $(this).attr('placeholder',$(this).attr('data-text'));
+		  } );
+
+
+</script>
+</body>
+</html>
